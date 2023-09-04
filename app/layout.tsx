@@ -1,6 +1,9 @@
 import './globals.css'
 import Navbar from '../components/navbar/Navbar'
-
+export const metadata = {
+  title: 'Contractors-app',
+  description: 'developed by Ricardo Espinosa',
+}
 export default function RootLayout({
   children,
 }: {
@@ -8,7 +11,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="">
+      <body className='flex flex-col h-full w-full absolute'>
 		<Navbar></Navbar>
 	  	{children}
 	</body>
