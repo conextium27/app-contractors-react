@@ -4,7 +4,8 @@ import { gql } from "@apollo/client";
 
 export async function GetDataContractors() {
 
-  const { data: { contractors } }: any = await client.query({
+  const {  error , data: { contractors } }: any = await client.query({
+    
     query: gql`
     {
       contractors{
@@ -19,6 +20,7 @@ export async function GetDataContractors() {
       }
     }
           `,
+          
   });
   return contractors.data.map((value: any) => {
     const res = { ...value.attributes };
