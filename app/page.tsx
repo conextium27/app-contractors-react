@@ -1,9 +1,7 @@
-import Container from "../components/container/container";
 import { GetDataContractors } from "./graaphql";
 import SearchBar from "../components/searchBar/SearchBar";
 import Modal from "../components/modal/Modal";
 import RowList from "../components/rowList/Rowlist";
-
 export default async function Home() {
     const data = await GetDataContractors();
     let text = 'Contractors'
@@ -11,7 +9,6 @@ export default async function Home() {
     return (
         <div className="flex items-center justify-center flex-1 w-full max-w-none bg-[#F2F1FF] relative ">
             <div className="bg-[#FFF] absolute top-0 left-0 w-full h-full z-0"></div>
-                <Container></Container>
             <div className="bg-[#ffffff] z-10">
                 <h3 className='text-[#1B1B18] text-[40px] px-[24px]'>{text}</h3>
                 <p className='text-color_gray text-sm mt-2 px-[24px]' >{subtitle}</p>
@@ -54,9 +51,9 @@ export default async function Home() {
                                 <RowList 
                                     key={i}
                                     unique={fullname}
-                                    name={fullname}
-                                    tags={specialities}
-                                    currency={dayrate}
+                                    fullname={fullname}
+                                    specialities={specialities}
+                                    dayrate={dayrate}
                                     availability={availability ? 'Yes' : 'No'}
                                 ></RowList>)
   

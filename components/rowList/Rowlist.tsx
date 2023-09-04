@@ -13,7 +13,7 @@ function RowList(props: any) {
 
     const formattedValue = new Intl.NumberFormat('en-US', {
         maximumFractionDigits: 0,
-    }).format(props.currency);
+    }).format(props.dayrate);
 
     const getRandomColor = () => {
         const letters = '0123456789ABCDEF';
@@ -38,18 +38,18 @@ function RowList(props: any) {
                     style={{ backgroundColor }}>
                     {props.unique.charAt(0)}</div>
                 <div className={`text-[#1B1B18]  ${isChecked ? 'selectedRowText' : ''}`}>
-                    {props.name}
+                    {props.fullname}
                 </div>
             </div>
             <div className="flex w-[298px] gap-[6px] items-center ">
-                {props.tags.slice(0, 2).map((speciality: any, i: any) => (
+                {props.specialities.slice(0, 2).map((specialities: any, i: any) => (
                     <div key={i} className={` bg-[#F3F3F3]  rounded-[5px] text-[#5E5E5E] px-[8px] py-[6px] ${isChecked ? 'selectedRowTag' : ''}`}>
-                        {speciality}
+                        {specialities}
                     </div>
                 ))}
-                {props.tags.length > 2 && (
+                {props.specialities.length > 2 && (
                     <div className={` bg-[#F3F3F3]  rounded-[5px] text-[#5E5E5E] px-[8px] py-[6px] ${isChecked ? 'selectedRowTag' : ''}`}>
-                        {props.tags.length - 2}+
+                        {props.specialities.length - 2}+
                     </div>
                 )}
 
