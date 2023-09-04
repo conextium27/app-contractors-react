@@ -47,8 +47,7 @@ export default async function Home() {
                       </div>
                   </div>
                   <ul>
-                      {data.map((data: any, i:number) => {
-
+                      {/* {data.map((data: any, i:number) => {
                           const { fullname, specialities, dayrate, availability } = data;
                           return (
                               <RowList
@@ -60,7 +59,7 @@ export default async function Home() {
                                   availability={availability ? 'Yes' : 'No'}
                               ></RowList>)
 
-                      })}
+                      })} */}
 
                   </ul>
               </div>
