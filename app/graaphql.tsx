@@ -1,6 +1,6 @@
-import { gql } from "@apollo/client";
+// import { gql } from "@apollo/client";
 import client from "../apollo-client";
-// import { gql } from "../node_modules/@apollo/client/index";
+import { gql } from "../node_modules/@apollo/client/index";
 
 export async function GetDataContractors() {
 
@@ -21,9 +21,7 @@ export async function GetDataContractors() {
           `,
   });
   return contractors.data.map((value: any) => {
-
     const res = { ...value.attributes };
-
     return res;
   });
 }
