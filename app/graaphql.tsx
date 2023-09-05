@@ -30,7 +30,6 @@ async function fetchData() {
   }
 
   const data = await response.json();
-  console.log(1111, data.data.contractors.data)
   return data.data.contractors.data.map((value:any) => {
     return value.attributes
   });
