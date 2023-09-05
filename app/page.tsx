@@ -1,9 +1,10 @@
-import { GetDataContractors } from "./graaphql";
 import SearchBar from "../components/searchBar/SearchBar";
 import Modal from "../components/modal/Modal";
 import RowList from "../components/rowList/Rowlist";
+import fetchData from "./graaphql"
 export default async function Home() {
-    const data = await GetDataContractors();
+    const  datosResult  = await fetchData();
+   
     let text = 'Contractors'
     let subtitle = 'Lorem ipsum dolor sit amet consectetur. Lacus semper convallis non et vel nec sit proin.'
     return (
@@ -45,7 +46,7 @@ export default async function Home() {
                         </div>
                     </div>
                     <ul>
-                        {data.map((data: any, i:number) => {
+                        {datosResult.map((data: any, i:number) => {
                             const { fullname, specialities, dayrate, availability } = data;
                             return (
                                 <RowList 
