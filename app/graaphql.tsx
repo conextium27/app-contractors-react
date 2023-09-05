@@ -1,5 +1,5 @@
 // const API_URL = 'http://localhost:1377/graphql';
-const API_URL = 'https://best-birds-5c1a4927fc.strapiapp.com/graphql';
+const API_URL =  'https://best-birds-5c1a4927fc.strapiapp.com/graphql';
 
 const CONTRACTORS_QUERY = `
 query{
