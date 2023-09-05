@@ -5,20 +5,6 @@ function SearchBar() {
   const [valueInput, setValueInput] = useState('')
 
   async function onClickFiltered() {
-    // let myHeaders = new Headers();
-    // myHeaders.append("Content-Type", "application/json");
-    // let raw = JSON.stringify({ value:valueInput })
-
-    // let requestOptions: RequestInit = {
-    //   method: 'POST',
-    //   headers: myHeaders,
-    //   body: raw,
-    //   redirect: 'follow'
-    // };
-    // fetch("http://127.0.0.1:3000/api/filtered", requestOptions)
-    //   .then(response => response.json())
-    //   .then(result => console.log(result))
-    //   .catch(error => console.log('error', error));
   }
 
   return (
