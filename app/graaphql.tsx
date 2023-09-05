@@ -1,4 +1,4 @@
-const API_URL = 'http://127.0.0.1:1337/graphql';
+const API_URL = 'http://127.0.0.1:1377/graphql';
 const CONTRACTORS_QUERY = `
 query{
     contractors{
@@ -12,7 +12,7 @@ query{
       }
     }
   }
-        `;
+  `;
 
 async function fetchData() {
   const response = await fetch(API_URL, {
