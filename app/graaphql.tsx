@@ -1,4 +1,5 @@
-const API_URL = 'http://127.0.0.1:1377/graphql';
+const API_URL = 'http://localhost:1377/graphql';
+
 const CONTRACTORS_QUERY = `
 query{
     contractors{
